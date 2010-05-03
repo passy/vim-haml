@@ -1,7 +1,7 @@
 " Vim indent file
 " Language:	SASS
 " Maintainer:	Tim Pope <vimNOSPAM@tpope.info>
-" Last Change:	2010 Mar 30
+" Last Change:	2007 Dec 16
 
 if exists("b:did_indent")
   finish
@@ -14,12 +14,12 @@ setlocal indentkeys=o,O,*<Return>,<:>,!^F
 
 " Only define the function once.
 if exists("*GetSassIndent")
-  finish
+  "finish
 endif
 
 let s:property = '^:\|^[[:alnum:]-]\+\%(:\|\s*=\)'
 let s:propertygroup = '^:\|^[[:alnum:]-]\+:$'
-let s:mixin = '^\++[[:alnum:]-_]\+'
+let s:mixin = '^\++\|^@[[:alnum:]-_]\+'
 let s:vardef = '^$[[:alnum:]-_]\+'
 
 function! GetSassIndent()
